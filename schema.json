@@ -1,0 +1,27 @@
+{
+  "schema" : [
+    {
+      "url" : "https://www.imdb.com/search/keyword/",
+      "process" : [
+        {
+          "element" : "div",
+          "target" : "widget_nested",
+          "type" : "class",
+          "method": "one"
+        },
+        {
+          "element": "div",
+          "target": "table-row",
+          "type": "class",
+          "method": "all"
+        },
+        {
+          "element": "a",
+          "target": "a",
+          "type": "class",
+          "method": "one"
+        }
+      ]
+    }
+  ]
+}
