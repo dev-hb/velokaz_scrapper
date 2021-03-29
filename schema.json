@@ -17,9 +17,8 @@
         },
         {
           "element": "a",
-          "target": "a",
-          "type": "class",
-          "method": "one"
+          "type": "normal",
+          "method": "all"
         }
       ]
     }
