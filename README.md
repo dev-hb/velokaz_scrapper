@@ -26,7 +26,7 @@ each element has its own properties, for example a class based element has a tar
 ### Properties
 He is the list of all possible properties
 
-<table>
+<table width=100%>
   <thead>
     <tr>
       <th>Property name</th>
@@ -36,9 +36,24 @@ He is the list of all possible properties
   </thead>
   <tbody>
     <tr>
+      <td>element</td>
+      <td>The name of DOM tag (eg. div, table, img, a...)</td>
+      <td>any string</td>
+    </tr>
+    <tr>
       <td>target</td>
       <td>The value of the class, id or attribute</td>
       <td>any string</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>The selector type used to parse data</td>
+      <td>['class', 'id', 'attribute', 'normal']</td>
+    </tr>
+    <tr>
+      <td>method</td>
+      <td>Extraction method helps to get specific data, if n integer is provided, it returns a limit of n elements</td>
+      <td>['one', 'all', n-integer]</td>
     </tr>
   </tbody>
 </table>
