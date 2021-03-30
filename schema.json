@@ -1,24 +1,46 @@
 {
   "schema" : [
     {
-      "url" : "https://www.imdb.com/search/keyword/",
+      "url" : "https://www.troc-velo.com/",
       "process" : [
         {
           "element" : "div",
-          "target" : "widget_nested",
-          "type" : "class",
-          "method": "one"
+          "target" : "blocmaincategorie",
+          "type" : "id",
+          "occurs": "one",
+          "as_list": false
         },
         {
           "element": "div",
-          "target": "table-row",
-          "type": "class",
-          "method": "all"
+          "target": "blocmaincategoriecol",
+          "type": "id",
+          "occurs": "all",
+          "as_list": false
         },
         {
           "element": "a",
           "type": "normal",
-          "method": "all"
+          "occurs": "all",
+          "as_list": false
+        },
+        {
+          "element": "a",
+          "target": "href",
+          "type": "attribute",
+          "as_list": true
+        }
+      ]
+    },
+    {
+      "url": "{parent_url}?page={page}",
+      "is_dynamic": true,
+      "variables": ["parent_url", "page"],
+      "process": [
+        {
+          "element": "div",
+          "type": "id",
+          "target": "afficheliste-content",
+          "occurs": "one"
         }
       ]
     }

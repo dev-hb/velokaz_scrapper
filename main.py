@@ -14,4 +14,5 @@ for page in schema['schema']:
     for process in page['process']:
         result = scrapper.get(process, result)
 
+
 print(result)
