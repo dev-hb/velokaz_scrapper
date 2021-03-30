@@ -46,6 +46,14 @@ class VelokazScrapper:
             else: return BeautifulSoup(''.join([str(x) for x in pr]), "lxml")
         return None
 
+    def getPaginationURL(self, schema):
+        mini_scrapper = VelokazScrapper(schema['url'])
+        inner_schema_process = schema['pagination']['process']
+        result = None
+        for process in inner_schema_process:
+            result = mini_scrapper.get(process, result)
+        return result[0]
+
     def handleText(self, schema, child=None, as_list=False):
         prs = self.getNewRoor(child)
         if schema['occurs'] == "one":
@@ -81,3 +89,7 @@ class VelokazScrapper:
         elif type == "attribute":
             return self.handleAttribute(schema, child, as_list)
         return None
+
+    def paginate(self, schema, child=None, as_list=False):
+        next_page_url = self.getPaginationURL(schema)
+        pass

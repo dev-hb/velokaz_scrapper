@@ -12,7 +12,9 @@ for page in schema['schema']:
     # create a scrapper instance
     scrapper = VelokazScrapper(page['url'])
     for process in page['process']:
-        result = scrapper.get(process, result)
-
+        if process['is_dynamic']:
+            result = scrapper.get(process, result)
+        else:
+            result = scrapper.paginate(process, result)
 
 print(result)
