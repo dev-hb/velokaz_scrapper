@@ -1,4 +1,4 @@
-from movies_scrapper import VelokazScrapper
+from velokaz_scrapper import VelokazScrapper
 import json
 from helpers import Helpers
 
