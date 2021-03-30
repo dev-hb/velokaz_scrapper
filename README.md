@@ -81,3 +81,6 @@ He is the list of all possible properties
     </tr>
   </tbody>
 </table>
+
+<br><br>
+<img src="http://devcrawlers.com/img/blog/articles/velokaz_logo.jpg" alt="Velokaz Logo" height=30/>
