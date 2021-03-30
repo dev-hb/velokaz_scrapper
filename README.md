@@ -11,17 +11,16 @@ A schema entry holds the target DOM element information, there are 4 types of el
 * Class based element
 * Id based element
 * Attribut based element
-* 
-each element has its own properties, for example a class based element has a target (class value) and a method (all elements or first occurence).
 
-<code>
+each element has its own properties, for example a class based element has a target (class value) and a method (all elements or first occurence).
+```json
   {
     "element": "div",
     "type": "class",
     "target": "navbar",
     "method": "one"
   }
-</code>
+```
 
 ### Properties
 He is the list of all possible properties
@@ -36,9 +35,24 @@ He is the list of all possible properties
   </thead>
   <tbody>
     <tr>
+      <td>schema</td>
+      <td>Root element that hold the strategy</td>
+      <td>array</td>
+    </tr>
+    <tr>
+      <td>url</td>
+      <td>The link of the page you want to scrape</td>
+      <td>string</td>
+    </tr>
+    <tr>
+      <td>process</td>
+      <td>A collection of selectors that defines the strategy</td>
+      <td>array</td>
+    </tr>
+    <tr>
       <td>element</td>
       <td>The name of DOM tag (eg. div, table, img, a...)</td>
-      <td>any string</td>
+      <td>string</td>
     </tr>
     <tr>
       <td>target</td>
@@ -51,9 +65,19 @@ He is the list of all possible properties
       <td>['class', 'id', 'attribute', 'normal']</td>
     </tr>
     <tr>
-      <td>method</td>
+      <td>occurs</td>
       <td>Extraction method helps to get specific data, if n integer is provided, it returns a limit of n elements</td>
-      <td>['one', 'all', n-integer]</td>
+      <td>['first', 'all', 'last', n-integer]</td>
+    </tr>
+    <tr>
+      <td>is_list</td>
+      <td>Define whether to return a simple list of a Tag element</td>
+      <td>boolean</td>
+    </tr>
+    <tr>
+      <td>is_list</td>
+      <td>Define whether to return a simple list of a Tag element</td>
+      <td>boolean</td>
     </tr>
   </tbody>
 </table>

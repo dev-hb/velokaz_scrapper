@@ -32,9 +32,26 @@
       ]
     },
     {
-      "url": "{parent_url}?page={page}",
+      "url": "{parent_url}",
       "is_dynamic": true,
-      "variables": ["parent_url", "page"],
+      "has_paginate": true,
+      "variables": ["parent_url"],
+      "paginate": {
+        "process": [
+          {
+            "element": "div",
+            "type": "id",
+            "target": "gpg",
+            "occurs": "last"
+          },
+          {
+            "element": "a",
+            "type": "attribute",
+            "target": "href",
+            "as_list": true
+          }
+        ]
+      },
       "process": [
         {
           "element": "div",
