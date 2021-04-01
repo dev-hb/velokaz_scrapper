@@ -1,0 +1,46 @@
+{
+  "schema" : [
+    {
+      "url" : "https://www.troc-velo.com/Annonce-Velo-10810{page}.htm",
+      "is_dynamic": true,
+      "has_paginate": false,
+      "variables": [
+        {
+          "name": "page",
+          "type": "limit",
+          "step": 30
+        }
+      ],
+      "process" : [
+        {
+          "element" : "div",
+          "target" : "afficheliste-content",
+          "type" : "id",
+          "occurs": "one",
+          "as_list": false
+        },
+        {
+          "element": "li",
+          "type": "normal",
+          "occurs": "all",
+          "as_list": false
+        },
+        {
+          "element": "a",
+          "type": "class",
+          "target": "LINKTITRENULST",
+          "occurs": "all",
+          "as_list": false
+        },
+        {
+          "element": "a",
+          "type": "attribute",
+          "target": "href",
+          "as_list": true,
+          "has_http": false,
+          "occurs" : "all"
+        }
+      ]
+    }
+  ]
+}

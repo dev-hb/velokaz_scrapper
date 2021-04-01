@@ -1,0 +1,25 @@
+{
+  "schema" : [
+    {
+      "url": "",
+      "consume":  true,
+      "is_dynamic": true,
+      "has_paginate": false,
+      "process" : [
+        {
+          "element": "h1",
+          "type": "id",
+          "target": "annoncetitle",
+          "occurs": "one",
+          "as_list": false
+        },
+        {
+          "element": "h1",
+          "type": "text",
+          "as_list": true,
+          "occurs" : "all"
+        }
+      ]
+    }
+  ]
+}
